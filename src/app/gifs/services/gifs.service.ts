@@ -1,3 +1,4 @@
+import { Gif, SearchResponse } from './../interfaces/gifs.interfaces';
 import { environment } from 'src/environment/environment';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -8,6 +9,7 @@ export class GifsService {
   private apiKeyGiphy: string = environment.apiKey;
   private serviceUrl: string = 'https://api.giphy.com/v1/gifs'
   private _tagsHistory: string[] = [];
+  public gifsList: Gif[] = [];
 
   constructor(
     private http: HttpClient
@@ -40,6 +42,11 @@ export class GifsService {
     this._tagsHistory.unshift(tag);
 
     this._tagsHistory = this._tagsHistory.splice(0, 10);
+    this.saveLocalStorage();
+  }
+
+  private saveLocalStorage(): void {
+    localStorage.setItem('history', JSON.stringify(this._tagsHistory));
   }
 
 /**
@@ -60,10 +67,10 @@ export class GifsService {
       .set('limit', '10')
       .set('q', tag)
 
-    this.http.get(`${this.serviceUrl}/search`, {params})
+    this.http.get<SearchResponse>(`${this.serviceUrl}/search`, {params})
       .subscribe(res => {
-        console.log(res)
-      })
+        this.gifsList = res.data;
+      });
   }
 
 }

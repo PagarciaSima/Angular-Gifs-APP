@@ -1,3 +1,4 @@
+// https://app.quicktype.io/
 export interface SearchResponse {
   data:       Gif[];
   meta:       Meta;
