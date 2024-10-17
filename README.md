@@ -1,27 +1,27 @@
-# AngularGifsApp
+# 🕵️‍♂️ Aplicación de Búsqueda de GIFs en Angular 15.2.0
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+## 🌟 Características
 
-## Development server
+Esta es una sencilla aplicación en Angular que permite buscar GIFs a través de la API de [Giphy](https://developers.giphy.com/).  
+Los GIFs buscados se guardan en un **historial en LocalStorage**, y el usuario tiene la opción de limpiar el historial con un botón dedicado.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### 🚀 Tecnologías utilizadas
+- **Angular 15.2.0**
+- **Giphy API** para las búsquedas
+- **LocalStorage** para guardar el historial
+- **Netlify** para el despliegue
 
-## Code scaffolding
+### 🖥️ Interfaz
+![Home](img/home.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 🔗 Enlace a la App Desplegada
+➡️ [Ver la aplicación en Netlify](https://gifs-application-angular.netlify.app/)
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 📦 Instalación y uso
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/PagarciaSima/Angular-Gifs-APP
+   cd Angular-Gifs-APP
