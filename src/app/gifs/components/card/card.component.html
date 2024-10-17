@@ -1,10 +1,18 @@
+
+
+
 <div class="card mb-2 text-center bg-dark" style="height: 260px;">
-  <img [src]="gif.images.downsized_medium.url" [alt]="gif.title"
+  <!-- <img [src]="gif.images.downsized_medium.url" [alt]="gif.title"
     class="card-img-top" style="height: 190px; object-fit: cover;"
+  > -->
+  <shared-lazy-image class="text-center" [url]="gif.images.downsized_medium.url"
+    [alt]="gif.title || 'No Name'"
   >
+  </shared-lazy-image>
   <div class="card-body text-white">
     <p class="card-text">
-      {{gif.title}}
+      {{gif.title || 'No title'}}
     </p>
   </div>
 </div>
+
