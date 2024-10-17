@@ -1,10 +1,12 @@
 <div class="d-flex justify-content-center">
   <img
-    [src]="url" [alt]="alt" class="card-img-top"
+    [src]="url" [alt]="alt" class="card-img-top animate__animated fadeIn"
     (load)="onLoad()"
-    [ngStyle]="{display: hasLoaded ? '' : 'none' }"  style="height: 190px; object-fit: cover;"
+    [ngStyle]="{display: hasLoaded ? '' : 'none' }"
+    style="height: 190px; object-fit: cover;"
   />
-  <img *ngIf="!hasLoaded" src="assets/loader.svg" class="mt-3"  style="height: 190px; object-fit: cover;"
+  <img *ngIf="!hasLoaded" src="assets/loader.svg" class="mt-3"
+    style="height: 190px; object-fit: cover;"
   />
 </div>
 
