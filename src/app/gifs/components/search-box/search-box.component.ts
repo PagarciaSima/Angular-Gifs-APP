@@ -5,10 +5,13 @@ import { GifsService } from '../../services/gifs.service';
   selector: 'gif-shearch-box',
   template: `
     <h5>Buscar:</h5>
-    <input type="text" class="form-control w-50" placeholder="Buscar gifs..."
-      (keyup.enter)="searchTag()"
-      #txtTagInput
-    >
+    <div class="d-flex align-items-center mb-2">
+      <input type="text" class="form-control me-2" placeholder="Buscar gifs..."
+        style="width: 374px;" (keyup.enter)="searchTag()"
+        #txtTagInput
+      >
+      <button class="btn btn-dark" (click)="clearHistory()">Limpiar</button>
+    </div>
   `
 })
 
@@ -26,5 +29,9 @@ export class SearchBoxComponent {
     this.gifsService.searchTag(newTag);
     this.tagInput.nativeElement.value = '';
     console.log(newTag);
+  }
+
+  clearHistory() {
+    this.gifsService.clearLocalStorage();
   }
 }
