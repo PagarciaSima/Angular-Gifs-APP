@@ -19,6 +19,12 @@ Los GIFs buscados se guardan en un **historial en LocalStorage**, y el usuario t
 
 ---
 
+### 📹 Demo en YouTube
+Mira el funcionamiento de la aplicación en este video:  
+[Demo en YouTube](https://youtu.be/ctwxMWiElv8)
+
+---
+
 ## 📦 Instalación y uso
 
 1. Clona este repositorio:
